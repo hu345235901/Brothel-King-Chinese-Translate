@@ -23,37 +23,37 @@ label random_morning_events():
                 $ renpy.show_screen("show_img", brothel.pic, _layer = "master")
                 with fade
 
-                "As you come out for some fresh air in the early morning, rubbing the sleep from your eyes, you are surprised to meet [girl.fullname], already up and running."
+                "As you come out for some fresh air in the early morning, rubbing the sleep from your eyes, you are surprised to meet [girl.fullname], already up and running.清晨，当你睡眼惺忪，出来呼吸新鲜空气时，惊讶地发现[girl.fullname]早已起床并开始跑步了。注，我略有一些英语基础，做过前端，希望可以帮到你。不知道怎样联系你，我的邮箱是jogooho@163.com，我在每个翻译后面加了注，在最后校正时Ctrl+F搜索注即可找到变动的地方"
 
                 show screen show_event(girl.get_pic("constitution", "dance", "profile", naked_filter=True, soft=True), x=config.screen_width, y=int(config.screen_height*0.8), bg=None)
                 with dissolve
 
-                girl.char "One, two, three, four..."
+                girl.char "One, two, three, four...一，二，三，四……注"
 
-                "She is doing her morning exercise, bursting with energy."
+                "She is doing her morning exercise, bursting with energy.她正在做晨练，精力充沛。注：用元气满满可能更接地气？"
 
                 if girl.is_("extravert"):
-                    girl.char "Oh, hi, Master! How is it going?"
+                    girl.char "Oh, hi, Master! How is it going?噢，嗨，主人！过得怎样？注"
                 elif girl.is_("introvert"):
-                    girl.char "Oh, it's you... I didn't think there would be anyone here."
+                    girl.char "Oh, it's you... I didn't think there would be anyone here.哦，是你……我没想到这里会有人。注"
 
                 if stat >= 200:
-                    "You are amazed at how fast and tough she has become. She has been at it for over an hour, but she barely looks out of breath."
+                    "You are amazed at how fast and tough she has become. She has been at it for over an hour, but she barely looks out of breath.你很吃惊，她变得快速又坚韧。她已经做了一个多小时，但看上去才刚刚开始喘气。注"
                 elif stat >= 100:
-                    "She is in very good shape, and you can't help but be impressed by her stamina."
+                    "She is in very good shape, and you can't help but be impressed by her stamina.她身体状况很好，她的耐力让你留下了深刻印象。注"
                 else:
-                    "She is doing some valiant efforts, and little by little, it seems to be paying off."
+                    "She is doing some valiant efforts, and little by little, it seems to be paying off.她正在做一些坚定的努力，一点一点地，这似乎是有回报的。注"
 
                 menu:
                     extend ""
 
                     "Admire her" if stat >= 200:
-                        you "You have become truly strong now, [girl.name]... I bet you could take me on!"
+                        you "You have become truly strong now, [girl.name]... I bet you could take me on!你现在真的很强大了，[girl.name]…我敢打赌你比得上我了！注"
 
                         if girl.is_("dom"):
-                            girl.char "Ha! You bet! I could take anyone on!"
+                            girl.char "Ha! You bet! I could take anyone on!哈！当然！我不输任何人！注"
                         elif girl.is_("sub"):
-                            girl.char "Oh, no, Master... I wouldn't dare..."
+                            girl.char "Oh, no, Master... I wouldn't dare...哦，不，主人。。。我不敢。。。注"
 
                         $ result = "pos"
 
@@ -103,7 +103,7 @@ label random_morning_events():
                 with dissolve
 
                 if stat >= 200:
-                    "She looks at you adoringly and joins her hands in a gesture of respect, bowing deeply as you pass."
+                    "She looks at you adoringly and joins her hands in a gesture of respect, bowing deeply as you pass./她崇拜地看着你，双手合十以示尊敬，在你经过时深深地鞠躬。检"
 
                     if girl.is_("dom"):
                         girl.char "Welcome, Master [MC.name], is there anything I can do for you today?"
